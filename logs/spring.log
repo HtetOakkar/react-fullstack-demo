@@ -3238,3 +3238,26 @@ Unconditional classes:
 2024-10-30T16:24:40.234+06:30  INFO 19772 --- [react-desktop-demo] [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-10-30T16:24:40.235+06:30  INFO 19772 --- [react-desktop-demo] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
 2024-10-30T16:24:40.239+06:30  INFO 19772 --- [react-desktop-demo] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-10-30T16:24:40.377+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] c.e.r.ReactDesktopDemoApplication        : Starting ReactDesktopDemoApplication using Java 17.0.7 with PID 19772 (D:\my projects\react-desktop-demo\target\classes started by HP in D:\my projects\react-desktop-demo)
+2024-10-30T16:24:40.377+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] c.e.r.ReactDesktopDemoApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-10-30T16:24:40.589+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-30T16:24:40.604+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interface.
+2024-10-30T16:24:40.698+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2024-10-30T16:24:40.699+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-30T16:24:40.699+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-10-30T16:24:40.715+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-10-30T16:24:40.715+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 335 ms
+2024-10-30T16:24:40.750+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-30T16:24:40.753+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-30T16:24:40.764+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-30T16:24:40.766+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-10-30T16:24:40.772+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ecff413
+2024-10-30T16:24:40.772+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-10-30T16:24:40.772+06:30  WARN 19772 --- [react-desktop-demo] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.43 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-10-30T16:24:40.818+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-30T16:24:40.833+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-30T16:24:40.863+06:30  WARN 19772 --- [react-desktop-demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-30T16:24:40.965+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2024-10-30T16:24:40.968+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-30T16:24:41.009+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] c.e.r.ReactDesktopDemoApplication        : Started ReactDesktopDemoApplication in 0.677 seconds (process running for 1384.114)
+2024-10-30T16:24:41.010+06:30  INFO 19772 --- [react-desktop-demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
