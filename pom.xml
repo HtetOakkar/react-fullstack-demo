@@ -32,6 +32,12 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -80,6 +86,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
 		<dependency>
 			<groupId>com.mysql</groupId>
@@ -104,68 +111,75 @@
 				</configuration>
 			</plugin>
 			<!-- Plugin to run npm commands -->
-        <plugin>
-            <groupId>com.github.eirslett</groupId>
-            <artifactId>frontend-maven-plugin</artifactId>
-            <version>1.12.0</version>
-            <executions>
-                <!-- Install Node and npm if not already installed -->
-                <execution>
-                    <id>install node and npm</id>
-                    <goals>
-                        <goal>install-node-and-npm</goal>
-                    </goals>
-                    <configuration>
-                        <nodeVersion>v20.15.0</nodeVersion>
-                        <npmVersion>10.7.0</npmVersion>
-                    </configuration>
-                </execution>
-                <!-- Run npm install in the frontend directory -->
-                <execution>
-                    <id>npm install</id>
-                    <goals>
-                        <goal>npm</goal>
-                    </goals>
-                    <configuration>
-                        <arguments>install</arguments>
-                        <workingDirectory>/src/main/frontend</workingDirectory>
-                    </configuration>
-                </execution>
-                <!-- Run npm build to generate the production build of React app -->
-                <execution>
-                    <id>npm build</id>
-                    <goals>
-                        <goal>npm</goal>
-                    </goals>
-                    <configuration>
-                        <arguments>run build</arguments>
-                        <workingDirectory>/src/main/frontend</workingDirectory>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.15.1</version>
+				<executions>
+					<!-- Install Node and npm if not already installed -->
+					<execution>
+						<id>install node and npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+						<configuration>
+							<nodeVersion>v20.15.0</nodeVersion>
+							<npmVersion>10.7.0</npmVersion>
+							<workingDirectory>./src/main/frontend</workingDirectory>
+						</configuration>
+					</execution>
+					
+					<!-- Run npm install in the frontend directory -->
+					<execution>
+						<id>npm install</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>install</arguments>
+							<workingDirectory>./src/main/frontend</workingDirectory>
+						</configuration>
+					</execution>
+					
+					<!-- Run npm build to generate the production build of React
+					app -->
+					<execution>
+						<id>npm build</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>run build</arguments>
+							<workingDirectory>./src/main/frontend</workingDirectory>
+						</configuration>
+					</execution>
+					
+				</executions>
+				
+			</plugin>
 
-        <!-- Copy React build files to Spring Boot static resources -->
-        <plugin>
-            <artifactId>maven-resources-plugin</artifactId>
-            <executions>
-                <execution>
-                    <id>copy-resources</id>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>copy-resources</goal>
-                    </goals>
-                    <configuration>
-                        <outputDirectory>${project.build.directory}/classes/static</outputDirectory>
-                        <resources>
-                            <resource>
-                                <directory>/src/main/frontend/build</directory>
-                            </resource>
-                        </resources>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
+			<!-- Copy React build files to Spring Boot static resources -->
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>./src/main/resources/templates</outputDirectory>
+							<resources>
+								<resource>
+									<directory>./src/main/frontend/build</directory>
+								</resource>
+							</resources>
+						</configuration>
+
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<repositories>
